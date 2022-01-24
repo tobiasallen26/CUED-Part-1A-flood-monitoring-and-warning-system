@@ -23,3 +23,12 @@ def rivers_with_stations(stations):
         if s.river not in rivers:
             rivers.append(s.river)
     return rivers
+
+def stations_by_river(stations):
+    rivers_to_stations = {}
+    for s in stations:
+        if s.river not in rivers_to_stations:
+            rivers_to_stations[s.river] = [s.name]
+        else:
+            rivers_to_stations[s.river].append(s.name)
+    return rivers_to_stations
