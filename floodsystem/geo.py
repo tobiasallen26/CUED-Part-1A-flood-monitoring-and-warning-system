@@ -10,6 +10,10 @@ from .utils import sorted_by_key  # noqa
 from haversine import haversine
 
 def stations_by_distance(stations, p):
+    station_distance = []
     for s in stations:
-        print(s, haversine(s.coordinate, p))
+        station_distance.append((s, haversine(s.coord, p)))
+    
+    station_distance = sorted_by_key(station_distance, 1)
+    return station_distance
 
