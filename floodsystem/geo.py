@@ -17,3 +17,8 @@ def stations_by_distance(stations, p):
     station_distance = sorted_by_key(station_distance, 1)
     return station_distance
 
+def rivers_with_stations(stations):
+    rivers = []
+    for s in stations:
+        rivers.append(s.river)
+    return rivers
