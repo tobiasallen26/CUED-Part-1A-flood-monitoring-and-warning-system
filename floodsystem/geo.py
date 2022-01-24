@@ -7,3 +7,9 @@ geographical data.
 """
 
 from .utils import sorted_by_key  # noqa
+from haversine import haversine
+
+def stations_by_distance(stations, p):
+    for s in stations:
+        print(s, haversine(s.coordinate, p))
+
