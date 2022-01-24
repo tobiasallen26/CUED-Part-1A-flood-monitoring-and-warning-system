@@ -20,5 +20,6 @@ def stations_by_distance(stations, p):
 def rivers_with_stations(stations):
     rivers = []
     for s in stations:
-        rivers.append(s.river)
+        if s.river not in rivers:
+            rivers.append(s.river)
     return rivers
