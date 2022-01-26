@@ -2,6 +2,7 @@ from floodsystem.geo import rivers_with_stations, stations_by_river
 from floodsystem.stationdata import build_station_list
 
 def run():
+    """Demonstration task for 1D"""
     stations = build_station_list()
 
     r_with_s = rivers_with_stations(stations)
