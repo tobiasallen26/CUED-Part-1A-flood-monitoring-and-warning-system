@@ -21,6 +21,8 @@ def test_stations_by_river():
     # checks the type of object returned
     assert type(s_by_r) == dict
     # checks type of object in s_by_r
-    assert type(s_by_r[s_by_r.values()[0]]) == list
+    assert type(list(s_by_r.values())[0]) == list
     # checks the type of object in the lists of stations
-    assert type(s_by_r.items()[0][0]) == MonitoringStation
+    assert type(list(s_by_r.values())[0][0]) == MonitoringStation
+
+test_stations_by_river()
