@@ -10,4 +10,6 @@ def test_stations_by_distance():
     # checks the type of the objects in the list
     assert type(station_distance[0][0]) == MonitoringStation
     assert type(station_distance[0][1]) == float
-    # checks the order of the list
+    # checks that the list is sorted
+    for i in range(10):
+        assert station_distance[i][1] < station_distance[i+1][1]
