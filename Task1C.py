@@ -1,1 +1,2 @@
 print("k")
+print("Ok")
