@@ -7,6 +7,8 @@ def test_stations_by_distance():
     CAM_COORDS = (52.2053, 0.1218)
     stations = build_station_list()
     station_distance = stations_by_distance(stations, CAM_COORDS)
+    # checks the object returned
+    assert type(station_distance) == list
     # checks the type of the objects in the list
     assert type(station_distance[0][0]) == MonitoringStation
     assert type(station_distance[0][1]) == float
