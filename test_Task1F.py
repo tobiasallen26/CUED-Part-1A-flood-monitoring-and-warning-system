@@ -15,12 +15,18 @@ def test_typical_range_consistent():
 
 def test_inconsistent_typical_range_stations():
     """tests requirements of inconsistent_typical_range_stations"""
-    stations = build_station_list()
+    # defines a list of monitoring stations where 3 have consistent data
+    # and 2 have inconsistent data
+    stations = [
+        MonitoringStation(None, None, None, None, (0, 1), None, None),
+        MonitoringStation(None, None, None, None, (0, 1), None, None),
+        MonitoringStation(None, None, None, None, (0, 1), None, None),
+        MonitoringStation(None, None, None, None, None, None, None),
+        MonitoringStation(None, None, None, None, None, None, None)]
     inconsistent_stations = inconsistent_typical_range_stations(stations)
     # checks the type of inconsistent_stations
     assert type(inconsistent_stations) == list
     # checks the type of objects in inconsistent_stations
     assert type(inconsistent_stations[0]) == MonitoringStation
-    # checks that stations in inconsistent_stations have inconsistent data
-    for s in inconsistent_stations:
-        assert not s.typical_range_consistent()
+    # checks that the length of inconsistent stations is 2
+    assert len(inconsistent_stations) == 2
