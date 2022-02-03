@@ -24,5 +24,3 @@ def test_stations_by_river():
     assert type(list(s_by_r.values())[0]) == list
     # checks the type of object in the lists of stations
     assert type(list(s_by_r.values())[0][0]) == MonitoringStation
-
-test_stations_by_river()
