@@ -33,9 +33,9 @@ def stations_by_river(stations):
     rivers_to_stations = {}
     for s in stations:
         if s.river not in rivers_to_stations:
-            rivers_to_stations[s.river] = [s.name]
+            rivers_to_stations[s.river] = [s]
         else:
-            rivers_to_stations[s.river].append(s.name)
+            rivers_to_stations[s.river].append(s)
     return rivers_to_stations
 
 def stations_within_radius(stations, centre, r):
