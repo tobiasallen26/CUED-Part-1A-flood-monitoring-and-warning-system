@@ -45,3 +45,23 @@ def stations_within_radius(stations, centre, r):
         if (haversine(station.cord , centre))<r:
             name.append(station.name)
             return name
+
+def rivers_by_station_number(stations, N):
+    rivers_list = stations_by_river(stations)
+    river_station_number_list =[]
+    for rivers in rivers_list:
+        len(rivers)
+        X = (rivers,len(rivers))
+        river_station_number_list.append(X)
+    Ordered = sorted_by_key(river_station_number_list, 1, reverse=True)
+    End_list = Ordered[:N]
+
+    for p in Ordered[N:]:
+
+        if p[1] == End_list[N-1][1]:
+
+            End_list.append(p)
+
+    return End_list
+
+    
