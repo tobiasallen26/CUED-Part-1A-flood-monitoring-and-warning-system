@@ -42,7 +42,7 @@ def stations_within_radius(stations, centre, r):
     stations = build_station_list()
     name = []
     for station in stations:
-        if (haversine(station.cord , centre))<r:
+        if (haversine(station.coord , centre))<r:
             name.append(station.name)
             return name
 
