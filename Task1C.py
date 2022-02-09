@@ -6,7 +6,7 @@ from floodsystem.stationdata import build_station_list
 def run():
     stations = build_station_list()
     P = (52.2053,0.1218)
-    stationlist = stations_within_radius(stations, p, 10)
+    stationlist = stations_within_radius(stations, P, 10)
     Alp = sorted(stationlist)
     print(Alp)
 
