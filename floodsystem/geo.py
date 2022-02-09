@@ -40,11 +40,11 @@ def stations_by_river(stations):
 
 def stations_within_radius(stations, centre, r):
     stations = build_station_list()
-    name = []
+    names = []
     for station in stations:
         if (haversine(station.coord , centre))<r:
-            name.append(station.name)
-            return name
+            names.append(station.name)
+    return names
 
 def rivers_by_station_number(stations, N):
     rivers_list = stations_by_river(stations)
