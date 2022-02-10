@@ -46,14 +46,17 @@ def stations_within_radius(stations, centre, r):
             names.append(station.name)
     return names
 
-def rivers_by_station_number(stations, N):
+def Rivers_by_Station_number(stations, N):
     rivers_list = stations_by_river(stations)
+    "Tuple of rivers and station numbers"
     river_station_number_list =[]
     for rivers in rivers_list:
         len(rivers)
         X = (rivers,len(rivers))
         river_station_number_list.append(X)
+        """Sorting by the number of stations"""
     Ordered = sorted_by_key(river_station_number_list, 1, reverse=True)
+    "Take the first N terms"
     End_list = Ordered[:N]
 
     for p in Ordered[N:]:
