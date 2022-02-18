@@ -46,6 +46,9 @@ class MonitoringStation:
             return False
         return True
 
+    def relative_water_level(self):
+        pass
+
 def inconsistent_typical_range_stations(stations):
     """This returns a list of stations which have inconsisten typical range data"""
     inconsistent_stations = []
