@@ -8,4 +8,4 @@ def stations_level_over_threshold(stations, tol):
         rwl = s.relative_water_level()
         if rwl is not None and rwl > tol:
             over_threshold_list.append((s, rwl))
-    return sorted_by_key(over_threshold_list, 1)
+    return sorted_by_key(over_threshold_list, 1, reverse=True)

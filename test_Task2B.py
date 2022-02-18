@@ -32,5 +32,5 @@ def test_stations_level_over_threshold():
     # checks for the expected length of the list returned
     assert len(over_threshold) == 2
     # checks the ordering of list
-    assert over_threshold[0][1] == 2
-    assert over_threshold[1][1], 2 == 2.5
+    assert over_threshold[0][1] == 2.5
+    assert over_threshold[1][1] == 2
