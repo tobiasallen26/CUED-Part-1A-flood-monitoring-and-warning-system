@@ -62,7 +62,7 @@ def Rivers_by_Station_number(stations, N):
     for p in Ordered[N:]:
 
         if p[1] == End_list[N-1][1]:
-            "Checking for rivers with same number of stations as the final river added"
+            "Checking for rivers with same number of stations as the last river added"
 
             End_list.append(p)
 
