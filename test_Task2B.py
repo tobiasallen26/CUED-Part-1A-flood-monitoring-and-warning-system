@@ -1,4 +1,3 @@
-from sqlalchemy import over
 from floodsystem.station import MonitoringStation
 from floodsystem.flood import stations_level_over_threshold
 
