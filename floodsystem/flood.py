@@ -15,19 +15,18 @@ def stations_level_over_threshold(stations, tol):
 
 from floodsystem.station import MonitoringStation
 
-
 def stations_highest_rel_level(stations, N):
     water_level_relative = []
-    "create empty list"
+    "initialise empty list"
     for station in stations:
         if station.relative_water_level() == None:
-            "If there is nothing there, don't add it to the list"
+            "If the water level is set to null(no data), don't add it to the list"
             pass
         else:
             water_level_relative.append((station,station.relative_water_level())) 
             "add it to the list"
     SortedList = sorted_by_key(water_level_relative, 1, reverse=True)
-    "For descending order"
+    "For descending order. "
 
     a = SortedList[:N]
     b = []
