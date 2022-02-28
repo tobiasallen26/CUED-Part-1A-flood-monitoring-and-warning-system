@@ -8,7 +8,7 @@ from floodsystem.stationdata import update_water_levels
 stations = build_station_list()
 update_water_levels(stations)
 def run():
-    print(stations_highest_rel_level(stations , 5))
+    print(stations_highest_rel_level(stations , 15))
 
 
 if __name__ == "__main__":
