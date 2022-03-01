@@ -6,6 +6,7 @@ from floodsystem.station import MonitoringStation
 
 
 def stations_highest_rel_level(stations, N):
+    """returns highest relative water level of N highest stations"""
     water_level_relative = []
     "create empty list"
     for station in stations:
