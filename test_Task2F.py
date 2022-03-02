@@ -1,5 +1,4 @@
 import matplotlib
-from sympy import poly
 from floodsystem.analysis import polyfit
 import datetime
 
