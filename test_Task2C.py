@@ -9,8 +9,7 @@ from floodsystem.stationdata import update_water_levels
 def test_2C():
     assert len(stations_highest_rel_level)==15
     #assert correct length of returned list
-    assert type(stations_highest_rel_level) is list
-    #assert datatype
+    
     
 
 
